@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historias Épicas - Web 2.0</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Publica tus Historias Épicas - Web 2.0</h1>
+        <p>Comparte tus historias y aventuras con el mundo.</p>
+    </header>
+
+    <!-- Formulario para publicar artículos -->
+    <section id="publish-article-section">
+        <h2>Publicar Artículo</h2>
+        <form id="publish-form">
+            <label for="article-title">Título del Artículo:</label><br>
+            <input type="text" id="article-title" required><br><br>
+            
+            <label for="article-content">Contenido del Artículo:</label><br>
+            <textarea id="article-content" required></textarea><br><br>
+            
+            <label for="article-image">Subir Imagen:</label><br>
+            <input type="file" id="article-image" accept="image/*"><br><br>
+            
+            <button type="submit">Publicar</button>
+        </form>
+    </section>
+
+    <!-- Sección donde se mostrarán los artículos -->
+    <section id="articles-section">
+        <h2>Artículos Publicados</h2>
+        <div id="articles-container">
+            <!-- Los artículos aparecerán aquí -->
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Historias Épicas - Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

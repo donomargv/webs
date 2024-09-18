@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historias Épicas - Web 3.0</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Historias Épicas - Web 3.0</h1>
+        <p>Inicia sesión para ver artículos y personaliza tus preferencias.</p>
+    </header>
+
+    <section id="auth-section">
+        <div id="login-form" class="form-container">
+            <h2>Iniciar Sesión</h2>
+            <form id="login">
+                <label for="login-username">Usuario:</label>
+                <input type="text" id="login-username" required>
+                <label for="login-password">Contraseña:</label>
+                <input type="password" id="login-password" required>
+                <button type="submit">Iniciar Sesión</button>
+                <p>No tienes una cuenta? <a href="#" id="show-register">Regístrate aquí</a></p>
+            </form>
+        </div>
+
+        <div id="register-form" class="form-container">
+            <h2>Registrarse</h2>
+            <form id="register">
+                <label for="register-username">Usuario:</label>
+                <input type="text" id="register-username" required>
+                <label for="register-password">Contraseña:</label>
+                <input type="password" id="register-password" required>
+                
+                <fieldset>
+                    <legend>Encuesta de Preferencias:</legend>
+                    <label for="preference-1">¿Qué tipo de historia te gusta más?</label><br>
+                    <input type="radio" id="preference1-1" name="preference-1" value="inodoro volador">
+                    <label for="preference1-1">Inodoro Volador</label><br>
+                    <input type="radio" id="preference1-2" name="preference-1" value="bucaramanga">
+                    <label for="preference1-2">Hinchas del Bucaramanga</label><br>
+                    <input type="radio" id="preference1-3" name="preference-1" value="lavanda">
+                    <label for="preference1-3">Lavanda de las Cumbias</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>¿Qué tipo de contenido prefieres?</legend>
+                    <label for="content-type-1">¿Te gustan los artículos sobre:</label><br>
+                    <input type="checkbox" id="content-type1-1" name="content-type-1" value="aventuras">
+                    <label for="content-type1-1">Aventuras</label><br>
+                    <input type="checkbox" id="content-type1-2" name="content-type-1" value="musica">
+                    <label for="content-type1-2">Música</label><br>
+                    <input type="checkbox" id="content-type1-3" name="content-type-1" value="deportes">
+                    <label for="content-type1-3">Deportes</label>
+                </fieldset>
+
+                <button type="submit">Registrarse</button>
+                <p>Ya tienes una cuenta? <a href="#" id="show-login">Inicia sesión aquí</a></p>
+            </form>
+        </div>
+    </section>
+
+    <section id="user-section" style="display:none;">
+        <div id="welcome-message"></div>
+        <div id="preferences-form">
+            <h2>Actualizar Preferencias</h2>
+            <label for="new-preferences">Preferencias (separadas por comas):</label>
+            <input type="text" id="new-preferences">
+            <button id="update-preferences">Actualizar Preferencias</button>
+        </div>
+        <div id="article-list">
+            <h2>Artículos Recomendados</h2>
+            <ul id="articles">
+                <!-- Los artículos recomendados aparecerán aquí -->
+            </ul>
+        </div>
+        <div id="article-content" style="display:none;">
+            <button id="close-article">Cerrar Artículo</button>
+            <div id="article-text"></div>
+        </div>
+        <button id="logout">Cerrar Sesión</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Historias Épicas - Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
